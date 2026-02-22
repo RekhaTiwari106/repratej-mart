@@ -1,18 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>RePraTej Mart Login</title>
+  <title>RePraTej Mart Login</title>
+
+  <style>
+    body{
+      margin:0;
+      font-family:Segoe UI;
+      background:linear-gradient(135deg,#667eea,#764ba2);
+    }
+
+    .box{
+      width:350px;
+      margin:120px auto;
+      background:white;
+      padding:30px;
+      border-radius:12px;
+      text-align:center;
+      box-shadow:0 15px 40px rgba(0,0,0,0.25);
+    }
+
+    input{
+      width:100%;
+      padding:12px;
+      margin-top:10px;
+      border-radius:6px;
+      border:1px solid #ccc;
+    }
+
+    button{
+      width:100%;
+      padding:12px;
+      margin-top:15px;
+      border:none;
+      border-radius:6px;
+      background:#667eea;
+      color:white;
+      font-size:16px;
+      cursor:pointer;
+    }
+
+    button:hover{
+      background:#5a67d8;
+      transform:scale(1.05);
+    }
+  </style>
 </head>
+
 <body>
 
-<h2>Welcome to RePraTej Mart</h2>
+<div class="box">
+  <h2>Welcome to RePraTej Mart</h2>
 
-<input id="username" placeholder="Enter your name">
-<button onclick="login()">Enter</button>
+  <input id="username" placeholder="Enter your name">
+  <button onclick="login()">Enter Store</button>
+</div>
 
 <script>
 function login(){
    const name = document.getElementById("username").value;
+
+   if(!name){
+      alert("Enter your name");
+      return;
+   }
+
    localStorage.setItem("username", name);
    window.location = "categories.html";
 }
