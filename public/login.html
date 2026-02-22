@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RePraTej Mart Login</title>
+</head>
+<body>
+
+<h2>Welcome to RePraTej Mart</h2>
+
+<input id="username" placeholder="Enter your name">
+<button onclick="login()">Enter</button>
+
+<script>
+function login(){
+   const name = document.getElementById("username").value;
+   localStorage.setItem("username", name);
+   window.location = "categories.html";
+}
+</script>
+
+</body>
+</html>

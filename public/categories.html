@@ -1,0 +1,12 @@
+<h1>Select Category</h1>
+
+<button onclick="openCategory('Electronics')">Electronics</button>
+<button onclick="openCategory('HomeDecor')">Home Decor</button>
+<button onclick="openCategory('Fashion')">Fashion</button>
+
+<script>
+function openCategory(cat){
+   localStorage.setItem("category", cat);
+   window.location="items.html";
+}
+</script>
